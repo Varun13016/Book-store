@@ -1,0 +1,71 @@
+.cartitems{
+    
+    width: 50vw;
+    /* border: 1px solid blue; */
+    margin-top: 5%;
+    margin-left: 8%;
+    padding: 5px;
+}
+.boxone{
+    height: 20%;
+    width:80%;
+    /* background-color:#FAFAFA;
+    border-bottom: 1px solid grey; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    margin-top: 1%;
+}
+.firstone{
+    height: 10%;
+    width:100%;
+    align-items: center;
+    /* border: 2px solid grey; */
+    display: flex;
+    justify-content: space-between;  
+    padding: 0px;
+}
+.Secondbox{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+}
+.secondone{
+    height:100%;
+    width:30%;    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#secondone{
+    height:80%;
+    width:70%
+}
+.secondtwo{
+    height: 100%;
+    width: 50%;
+   
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.thirdone{
+    /* height: 18%; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+   
+}
+.details{
+    height: 5vh;
+    border: 1px solid grey;
+    margin-top: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
