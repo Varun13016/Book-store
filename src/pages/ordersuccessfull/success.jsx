@@ -4,8 +4,13 @@ import './success.css';
 import { Box, Button } from '@mui/material';
 import placeOrder from './placeOrder.png'
 import Footer from '../../components/footer/footer';
+import { useHistory } from 'react-router-dom';
 
 function Success() {
+    let history=useHistory()
+    const Continue=()=>{
+        history.push("/dashboard")
+    }
     return (
         <div>
             <Header />
@@ -34,7 +39,7 @@ function Success() {
 
                     </table>
 
-                    <Button  variant='contained'>Continue Shopping</Button>
+                    <Button  variant='contained' onClick={Continue}>Continue Shopping</Button>
                 </Box>
             </Box>
             <Footer  />
