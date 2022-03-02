@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../header/header';
-import '../ordersuccessfull/success.css';
+import Header from '../../components/header/header';
+import './success.css';
 import { Box, Button } from '@mui/material';
-import placeOrder from '../ordersuccessfull/placeOrder.png'
-import Footer from '../footer/footer';
+import placeOrder from './placeOrder.png'
+import Footer from '../../components/footer/footer';
 
 function Success() {
     return (

@@ -1,0 +1,27 @@
+.wishbox{
+    width:60vw;
+    /* height:50vh; */
+    /* border: 1px solid red; */
+    margin-top: 5vh;
+    position: relative;
+    left:10vw
+}
+.wishimg{
+    height: 60%;
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+.delete{
+    margin-left: 40%;
+}
+.wishone{
+    height: 7vh;
+    width: 100%;
+    align-items: center;
+    /* border: 2px solid grey; */
+    border-bottom: 2px solid grey;
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #E4E4E4;
+}

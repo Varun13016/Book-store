@@ -1,6 +1,7 @@
 
 import './App.css';
-import Success from './components/ordersuccessfull/success';
+import MyWishList from './pages/wishlist/WishList';
+
 
 import Router from './routers/router';
 
@@ -8,8 +9,9 @@ import Router from './routers/router';
 function App() {
   return (
     <div className="App">
-      {/* <Success /> */}
+     
       <Router />
+      {/* <MyWishList/> */}
       
     </div>
   );

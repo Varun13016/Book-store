@@ -38,7 +38,7 @@ function GetBook(props) {
                     {props.book.author}
                 </Typography>
                 <Box sx={{ display: 'flex',width:'100%',alignItems:'center' }} >
-                    <div id='star'>4.5<StarRoundedIcon sx={{color:'whitesmoke'}} /></div>
+                    <div id='star'>4.5<StarRoundedIcon  sx={{color:'whitesmoke',fontSize:'medium'}} /></div>
                     ({props.book.quantity})
                 </Box>
                 <Typography sx={{ fontWeight: 'bold' }}>

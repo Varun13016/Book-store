@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Header from "../components/header/header";
-import { fetchBook } from "../services/dataservice";
-import GetBook from "../components/getbook/getbook";
+import Header from "../../components/header/header";
+import { fetchBook } from "../../services/dataservice";
+import GetBook from "../../components/getbook/getbook"
 import { Box, Grid } from "@mui/material";
-import CardBox from "../components/card/card";
+import CardBox from "../../components/card/card"
 
 
 

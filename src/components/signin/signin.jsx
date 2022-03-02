@@ -5,6 +5,7 @@ import InputLabel from '@mui/material/InputLabel';
 import { Button } from "@mui/material";
 import { Signin } from "../../services/userservice";
 import { useHistory } from "react-router-dom";
+import '../signin/signin.css'
 
 
 
@@ -15,7 +16,7 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).
 
 function SignIn(props) {
 
-    
+    let history = useHistory()
 
     const [regexObj, setRegexObj] = React.useState({ errorEmail: false, emailHelper: "", errorPassword: false, passwordhelper: "" })
 
@@ -67,6 +68,7 @@ function SignIn(props) {
             Signin(signinObj).then((response) => {
                 localStorage.setItem("Token", response.data.result.accessToken)
                 console.log(response)
+                history.push("/dashboard")
             }).catch((err) => {
                 console.log(err)
             })
@@ -74,20 +76,8 @@ function SignIn(props) {
     }
     return (
         <div>
-            <Box
-                sx={{
-                    width: '25vw',
-                    height: '60vh',
-                    //border: '1px solid black',
-                    backgroundColor: '#FFFFFF',
-                    borderRadius: '10px',
-                    
-                    position: 'relative',
-                    
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignContent: 'space-around'
-                }}>
+            <Box className="signin">
+               
                 <Box sx={{
                     width: '100%', height: '14%', marginTop: '10px',
                     display: 'flex', flexDirection: 'row',justifyContent:'space-around'
@@ -123,7 +113,7 @@ function SignIn(props) {
                     <Button variant="outlined" size="medium">Google</Button>
                 </Box>
             </Box>
-        </div>
+            </div>
     )
 }
 export default SignIn

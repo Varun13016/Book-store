@@ -96,18 +96,8 @@ function SignUp(props) {
     }
     return (
         <div>
-            <Box
-                sx={{
-                    width: '25vw',
-                    height: '60vh',
-                    //border: '1px solid black',
-                    backgroundColor: '#FFFFFF',
-                    borderRadius: '10px',
-                    position: 'relative',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'space-around'
-                }}>
+            <Box className='signup'>
+               
                 <Box sx={{
                     width: '100%', height: '12%', display: 'flex', justifyContent: 'space-around',
                     display: 'flex', flexDirection: 'row', color: '#878787'

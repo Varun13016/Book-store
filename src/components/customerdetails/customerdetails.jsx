@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { InputLabel, TextField, FormControlLabel, RadioGroup,Radio,Button } from "@mui/material";
+import { InputLabel, TextField, FormControlLabel, RadioGroup,Radio,Button,Paper } from "@mui/material";
 import { customerDetails } from "../../services/dataservice";
 import '../customerdetails/customerdetails.css';
 
 
 
-function CustomerDetails() {
+function CustomerDetails(props) {
 
     //const [orderDetails, setOrderDetails] = React.useState(false)    
     
@@ -17,6 +17,7 @@ function CustomerDetails() {
         setAddress({...address, fullAddress:e.target.value})
     }
     const AddressType=(e)=>{
+        console.log(e.target.value)
         setAddress({...address, addressType:e.target.value})
     }
     const Town=(e)=>{
@@ -27,9 +28,16 @@ function CustomerDetails() {
     }
 
     const takeOrder=()=>{
-        //props.listenToContinue()
+        let obj = {
+            "addressType": "Home",
+            "fullAddress": "Plot no.13, Bhallar township, nagpur",
+            "city": "Mumbai",
+            "state": "Maharastra"
+          }
+        console.log(address)
+        props.listenToContinue()
         //setOrderDetails(true)
-        customerDetails(address).then((response)=>{
+        customerDetails(obj).then((response)=>{
             console.log(response)
         }).catch((error) => {
             console.log(error)
@@ -37,8 +45,8 @@ function CustomerDetails() {
 
     }
     return (
-        <Box className="customerdetails">
-            <Box className="title">
+        <Paper sx={{border:'0.5px solid grey',marginTop:'20px'}}> <Box className="customerdetails">
+           <Box className="title">
                 <h2>Customer Details</h2>
                 <Button variant="outlined">Add New Address</Button>
             </Box>
@@ -87,12 +95,12 @@ function CustomerDetails() {
             <Box className="button">
                 <Button variant="contained" sx={{ width: '30%' }} onClick={takeOrder}>Continue</Button>
             </Box>
+           
 
 
-            {/* {orderDetails? <Card className="details" >Order Summary</Card> : <OrderSummary />} */}
+           
 
-
-        </Box>
+        </Box> </Paper>
 
     )
 }

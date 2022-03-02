@@ -1,0 +1,33 @@
+.signin{
+
+        width: 25vw;
+        height: 60vh;
+        /* border: 1px solid black; */
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-content: space-around
+
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+    .signin{
+        width: 100vw;
+        height:100vh
+    }
+}
+@media only screen and (min-width : 481px) and (max-width : 768px){
+    .signin{
+        width:100vw
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+    .signin{
+        width:35vw;
+        align-content:space-between
+        /* height: 60vh */
+    }
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { Box } from "@mui/material";
-import '../mainpage/mainpage.css';
-import shopimg from '../../../Assets/shopimg.png'
-import SignIn from "../../signin/signin";
-import SignUp from "../../signup/signup";
+import './mainpage.css';
+import shopimg from './shopimg.png'
+import SignIn from "../../components/signin/signin"
+import SignUp from "../../components/signup/signup";
 
 
 function MainPage () {
